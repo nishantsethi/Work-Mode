@@ -24,7 +24,7 @@ while True:
         to_parse = [[total_time, current_time, date_1]]
         print("The total time:", total_time,"seconds")
 
-        with open('/Users/nishantsethi/Desktop/ps/Work Mode/work_hours.csv', 'a') as file:
+        with open('work_hours.csv', 'a') as file:
             writer = csv.writer(file)
             writer.writerows(to_parse)
 
