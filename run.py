@@ -12,8 +12,9 @@ while True:
     try:
         input() #For ENTER
         start_time = time.time()
+        now = datetime.now()
+        old_t = now.strftime("%H:%M:%S")
         print("Stopwatch started...")
-        
     except KeyboardInterrupt:
         print("Stopwatch stopped...")
         end_time = time.time()
@@ -21,7 +22,7 @@ while True:
         now = datetime.now()
         date_1 = now.strftime("%d/%m/%Y")
         current_time = now.strftime("%H:%M:%S")
-        to_parse = [[total_time, current_time, date_1]]
+        to_parse = [[total_time, old_t, current_time, date_1]]
         print("The total time:", total_time,"seconds")
 
         with open('work_hours.csv', 'a') as file:
