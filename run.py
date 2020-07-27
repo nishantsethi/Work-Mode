@@ -23,7 +23,7 @@ while True:
         date_1 = now.strftime("%d/%m/%Y")
         current_time = now.strftime("%H:%M:%S")
         to_parse = [[total_time, old_t, current_time, date_1]]
-        print("The total time:", total_time,"seconds")
+        print("The total time:", total_time,"seconds or ",format(total_time/60, '.2f'),"minutes or", format(total_time/3600, '.2f'),"hours")
 
         with open('work_hours.csv', 'a') as file:
             writer = csv.writer(file)
